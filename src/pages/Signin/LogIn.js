@@ -8,8 +8,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
-import GoogleIcon from '@mui/icons-material/Google';
 import { IconButton } from '@mui/material';
+import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -52,8 +52,6 @@ function LogIn() {
                         <IconButton aria-label="github" size="large">
                             <GitHubIcon fontSize="inherit" />
                         </IconButton>
-                        
-                        
                     </Box>
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                         <TextField

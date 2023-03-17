@@ -9,6 +9,10 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
+import { IconButton } from '@mui/material';
+import GoogleIcon from '@mui/icons-material/Google';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 
 const theme = createTheme();
@@ -51,6 +55,17 @@ export default function SignUp() {
                     <Typography component="h1" variant="h5">
                         Create New Account
                     </Typography>
+                    <Box sx={{marginTop: 2}}>
+                        <IconButton aria-label="google" size="large">
+                            <GoogleIcon fontSize="inherit" />
+                        </IconButton>
+                        <IconButton aria-label="facebook" size="large">
+                            <FacebookIcon fontSize="inherit" />
+                        </IconButton>
+                        <IconButton aria-label="github" size="large">
+                            <GitHubIcon fontSize="inherit" />
+                        </IconButton>
+                    </Box>
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                         <TextField
                             margin="normal"
