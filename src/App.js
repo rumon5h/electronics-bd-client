@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import Navbar from './pages/Navbar';
 import LogIn from './pages/Signin/LogIn';
 import SignUp from './pages/Signin/SignUp';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
      </Routes>
      
      <Footer/>
+     <Toaster/>
     </div>
   );
 }

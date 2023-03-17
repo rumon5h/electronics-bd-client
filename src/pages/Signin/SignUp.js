@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 
 
 const theme = createTheme();
@@ -16,10 +17,22 @@ export default function SignUp() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
+        const userInfo = {
+            name: data.get('name'),
             email: data.get('email'),
             password: data.get('password'),
-        });
+            confirmPassword: data.get('confirm-password'),
+        };
+
+        if(!userInfo.name || !userInfo.email || !userInfo.password || !userInfo.confirmPassword){
+            return toast.error('Please fill up the form completely')
+        }
+
+        if(userInfo.password !== userInfo.confirmPassword){
+            return toast.error('Password does not match.')
+        }
+        console.log(userInfo);
+        
     };
 
     return (
